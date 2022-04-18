@@ -8,10 +8,11 @@ trap 'LAST_COMMAND=$CURRENT_COMMAND; CURRENT_COMMAND=$BASH_COMMAND' DEBUG
 #   on error: print the failed command
 trap 'ERROR_CODE=$?; FAILED_COMMAND=$LAST_COMMAND; tput setaf 1; echo "ERROR: command \"$FAILED_COMMAND\" failed with exit code $ERROR_CODE"; put sgr0;' ERR INT TERM
 
-# Start doing the stuff
+# Get tpm
 echo "Downloading tpm to ~/.tmux/plugins/tpm"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Create the conf file
 echo "Creating ~/.tmux.conf file"
 cat > ~/.tmux.conf << EOF
 # increase history size (Be careful making this too large)
@@ -27,9 +28,11 @@ set -g @plugin 'tmux-plugins/tmux-logging'
 run '~/.tmux/plugins/tpm/tpm'
 EOF
 
+# Create logging directory
 echo "Creating directory for logs at ~/tmuxlogs"
 mkdir ~/tmuxlogs
 
+# Next steps
 echo -e  "\n!!IMPORTANT NEXT STEP!!"
 echo "Open a new Tmux session and fetch and source our new plugins." 
 echo -e "\ntmux new -s abc"
