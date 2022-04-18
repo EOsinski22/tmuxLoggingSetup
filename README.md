@@ -22,7 +22,11 @@ Press: Prefix_key + I
 Press: Prefix_key + I
 ```
 
-```
-# From within tmux use our new keybinds to capture full pane history to ~/tmuxlogs/
-Press: Prefix_key + l
-```
+Finished! Now in a tmux session we can do the following:
+
+Description|Command
+-|- 
+Toggle logging on/off for the attached pane|`prefix + P`
+Capture visable history for the attached pane|`prefix + k`
+Capture full history (based on history-limit) for the attached pane|`prefix + l`
+Clear history|`prefix + L`
