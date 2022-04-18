@@ -30,3 +30,5 @@ Toggle logging on/off for the attached pane|`prefix + P`
 Capture visable history for the attached pane|`prefix + k`
 Capture full history (based on history-limit) for the attached pane|`prefix + l`
 Clear history|`prefix + L`
+
+**If you enable logging, the log file is written out when toggling is toggled off.*
