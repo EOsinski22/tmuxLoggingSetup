@@ -4,7 +4,7 @@ A pair of scripts intended to quickly set up logging capabilities for Tmux utili
 ### Install
 `git clone https://github.com/EOsinski22/tmuxLoggingSetup.git`
 
-`cd tmuxLoggingSetup && chmod +x *`
+`cd tmuxLoggingSetup && chmod +x installer.sh setup.sh`
 
 `./installer.sh`
 
