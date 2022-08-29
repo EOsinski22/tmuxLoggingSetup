@@ -16,7 +16,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Creating ~/.tmux.conf file"
 cat > ~/.tmux.conf << EOF
 # increase history size (Be careful making this too large)
-set -g history-limit 15000
+set -g history-limit 30000
 
 # List of plugins
 # to enable a plugin, use the 'set -g @plugin' syntax:
