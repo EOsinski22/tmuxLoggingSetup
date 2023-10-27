@@ -15,6 +15,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Create the conf file
 echo "Creating ~/.tmux.conf file"
 cat > ~/.tmux.conf << EOF
+# inherit default shell
+set-option -g default-command $SHELL
+
 # increase history size (Be careful making this too large)
 set -g history-limit 30000
 
